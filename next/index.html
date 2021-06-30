@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt.pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.NEXT</title>
+
+    <link href="uicons-regular-rounded/css/uicons-regular-rounded.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <header class="cabeca">
+        <div>
+            <a href="index.html"></a><span class="lblNext">.Next</span></a>
+            <button class="btnBuscar">
+                <!--<i class="fi-rr-search" id="btnLupa"></i>-->
+            </button>
+        </div>
+        <div class="alerta">
+            <div>
+                <label for="">Para fazer busca, passe o mouse na lateral esquerda da imagem no ecrã</label>
+                <label class="nota">Passe o mouse sobre a imagem para ver os itens de menu</label>
+            </div>
+        </div>
+
+        <div class="localizacao">
+            <button><i class="fi-rr-marker"></i></button>
+            <label class="luanda">Luanda</label>
+        </div>
+    </header>
+    <!--Fim de cabeçalho-->
+
+
+    <div class="tronco" id="tronco">
+
+        <nav class="menuLateralEsquerdo">
+            <div class="b1">
+                <div class="txtRux">
+                    <input type="text" name="" id="" placeholder="Fazer busca">
+                    <i class="fi-rr-arrow-small-right"></i>
+                </div>
+            </div>
+
+            <div class="b2">
+                <!--div vazia-->
+            </div>
+        </nav>
+
+        <div id="home">
+            <div class="bloco" id="blocoCima">
+                <div id="mosaicoComunidades">
+                    <i class="fi-rr-users"></i>
+                    <label for="">Grupos</label>
+                </div>
+                <div id="mosaicoTecnologias">
+                    <i class="fi-rr-usb-drive"></i>
+                    <label for="">Tecno.</label>
+
+                </div>
+                <div id="mosaicoDesporto">
+                    <i class="fi-rr-volleyball"></i>
+                    <label for="">Desporto</label>
+                </div>
+                <div id="mosaicoMusicas">
+                    <i class="fi-rr-headphones"></i>
+                    <label for="">Músicas</label>
+                </div>
+            </div>
+
+            <div class="bloco" id="blocoBaixo">
+                <div id="mosaicoSaude">
+                    <i class="fi-rr-stethoscope"></i>
+                    <label for="">Saúde</label>
+                </div>
+                <div id="mosaicoArte">
+                    <i class="fi-rr-palette"></i>
+                    <label for="">Arte</label>
+                </div>
+                <div id="mosaicoCiencia">
+                    <i class="fi-rr-physics"></i>
+                    <label for="">Ciência</label>
+                </div>
+                <div id="mosaicoTurismo">
+                    <i class="fi-rr-label"></i>
+                    <label for="">Turismo</label>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <footer class="membros">
+
+        <div class="social">
+            <a href="">facebook</a>
+            <a href="">google</a>
+            <a href="">whatsApp</a>
+        </div>
+
+        <div class="apoiadores">
+            <span>Apoiadores</span> <br>
+            <a href="">Jovílio Zua</a>
+            <a href="">Célio Saldanha</a>
+            <a href="">Marcelina Dos Santos</a>
+            <a href="">António Bunga</a>
+            <a href="">Agostinho Marcelo</a>
+            <a href="">Lopes Bango</a>
+            <a href="">Maria Cláudia</a>
+            <a href="">Joaquim Kassalaxe</a>
+            <a href="">Stasmilau António</a>
+            <a href="">Anderson Espírito</a>
+            <a href="">Manuel Ernestro</a>
+            <a href="">Rosalina Kumbatela</a>
+            <a href="">Gilberto Kiala</a>
+        </div>
+
+        <div class="tradeMark">
+            &copy;
+            <label for="">v. 2021</label><br>
+            <label for="">Jovilio Zua</label>
+        </div>
+
+    </footer>
+
+</body>
+<script>
+    var home = document.getElementById("home");
+
+    var mosaicoComunidades = document.getElementById("mosaicoComunidades");
+    var mosaicoTecnologias = document.getElementById("mosaicoTecnologias");
+
+    var mosaicoDesporto = document.getElementById("mosaicoDesporto");
+    var mosaicoMusicas = document.getElementById("mosaicoMusicas");
+
+    var mosaicoSaude = document.getElementById("mosaicoSaude");
+    var mosaicoArte = document.getElementById("mosaicoArte");
+
+    var mosaicoCiencia = document.getElementById("mosaicoCiencia");
+    var mosaicoTurismo = document.getElementById("mosaicoTurismo");
+
+
+
+    function inicial() {
+        home.style.backgroundImage = "url(img/caderno.jpg)";
+    }
+
+    function mostrarComunidades() {
+        home.style.backgroundImage = "url(img/comunidades.jpg)";
+    }
+
+    function mostrarSaude() {
+        home.style.backgroundImage = "url(img/saude.jpg)";
+    }
+
+    function mostrarMusica() {
+        home.style.backgroundImage = "url(img/musicas.jpg)";
+    }
+    function mostrarTurismo() {
+        home.style.backgroundImage = "url(img/turismo.jpg)";
+    }
+    function mostrarArte() {
+        home.style.backgroundImage = "url(img/arte.jpg)";
+    }
+
+
+    mosaicoComunidades.onmouseenter = mostrarComunidades;
+    mosaicoComunidades.onmouseleave = inicial;
+
+    mosaicoMusicas.onmouseenter = mostrarMusica;
+    mosaicoMusicas.onmouseleave = inicial;
+
+    mosaicoArte.onmouseenter = mostrarArte;
+    mosaicoArte.onmouseleave = inicial;
+
+    mosaicoTurismo.onmouseenter = mostrarTurismo;
+    mosaicoTurismo.onmouseleave = inicial;
+
+    mosaicoSaude.onmouseenter = mostrarSaude;
+    mosaicoSaude.onmouseleave = inicial;
+</script>
+
+</html>
